@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>3d立体魔方</title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+*{
+    margin:0;           
+    /* 默认样式去掉边距 */
+    padding:0;
+}
+div{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    opacity: 0.9;
+    text-align: center;
+    line-height: 500px;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+body{
+    transform-style: preserve-3d;
+    height: 100vh;
+    animation: fram1 10s infinite ease;                  /*引用动画*/
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.top{
+    transform:rotateX(90deg) translateZ(250px);
+ 
+}
+.bottom{
+    background-color:blueviolet;
+    transform:rotateX(-90deg) translateZ(250px);
+}
+.left{
+    background-color:blanchedalmond;
+    transform:rotateY(-90deg) translateZ(250px);
+}
+.right{
+    background-color:cadetblue;
+    transform:rotateY(90deg) translateZ(250px);
+ 
+}
+.after{
+    background-color:chocolate;
+    transform:rotateY(180deg) translateZ(250px);
+}
+.before{
+    background-color:cyan;
+    transform:rotateY(0deg) translateZ(250px);
+}
+@keyframes fram1{       /*动画旋转X轴与Y轴*/
+    0%,100%{
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    50%{
+        transform: rotateY(180deg) rotateX(180deg);
+ 
+    }
+}
+        </style>
+    </head>
+    <body>                            <!--加入文字让视觉更加清晰-->
+        <div class="top">
+        	<img src="http://m.qpic.cn/psc?/V12oXq0z0hnmzg/XwdxpE8Hv.bcKvYPS8WipLx5I.tv5SYkUKin9wepwfIgald*jixzv5aKwnLBxNrXGtXJDMeIJT850RtsS6naPGIa4h4B.7v9NYL4sb4CJgU!/b&bo=0AJcAwAAAAARF60!&rf=viewer_4" alt="">
+        </div>            
+        <div class="bottom">
+        	<img src="http://m.qpic.cn/psc?/V12oXq0z0hnmzg/XwdxpE8Hv.bcKvYPS8WipI3G6kHMMr*6UuO2ei9RsERsIrsJFZmmqAYLMfYB*5ygAuU1qyyano6H.B5DHnBdy3wbbMwtJl1eT*hlBEZ.yCs!/b&bo=OAQ4BAAAAAARFyA!&rf=viewer_4" alt="">
+        </div>     
+        <div class="left">
+        	<img src="http://m.qpic.cn/psc?/V12oXq0z0hnmzg/XwdxpE8Hv.bcKvYPS8WipMN4ALsf.pgWdZOYfWW.*IEcBRDZq5BQhT1ZKkwPulTNR5UrTbEU0B0fFtJ7QS.zjIKNfYne35OjRHzRPMT9a7c!/b&bo=OASABwAAAAARF5s!&rf=viewer_4" alt="">
+        </div>       
+        <div class="right">
+        	<img src="http://m.qpic.cn/psc?/V12oXq0z0hnmzg/XwdxpE8Hv.bcKvYPS8WipD5hfcHN344vNP1LeT5jq4nVBLLefdrT22wZ5Hc8uZszvCwHIA4ZhFiKu7N1saaxBrsf9JMnX43zHZgdSCPO*Vs!/b&bo=rgIfAwAAAAARF5A!&rf=viewer_4" alt="">
+        </div>      
+        <div class="after">
+        	<img src="http://m.qpic.cn/psc?/V12oXq0z0hnmzg/XwdxpE8Hv.bcKvYPS8WipOBka.ZxXaMzanIQjhvvCYkPShV5viuV59Rcj11zI4GqDzFyHXsOimvG5.3M19Yae3hnDqRLU5WOpm*sN4Mf*5I!/b&bo=0ALlAgAAAAARFxU!&rf=viewer_4" alt="">
+        </div>      
+        <div class="before">
+        	<img src="http://m.qpic.cn/psc?/V12oXq0z0hnmzg/4lHRQteLJOPksbF5iWLkOkZov5CWT7Wc2yExmLnZzcMd2gukAVag05JkgjEAjXvdpI5o3Dr6eugmv9d5m2yvIA!!/b&bo=OASyBAAAAAARB7o!&rf=viewer_4" alt="">
+        </div>     
+    </body>
+</html>
